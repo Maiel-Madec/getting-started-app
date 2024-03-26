@@ -18,4 +18,7 @@ jobs:
           password: ${{secrets.DOCKERHUB_PASSWORD}}
 
       - name: Build Docker image
-        run: docker build -t madocx/getting-started
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: user/app:latest
