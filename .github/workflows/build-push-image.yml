@@ -1,2 +1,9 @@
-name: build-push-image.yml
+name: build and push image
 on: {push}
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
