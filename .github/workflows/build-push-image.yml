@@ -16,3 +16,6 @@ jobs:
         with:
           username: ${{secrets.DOCKERHUB_USERNAME}}
           password: ${{secrets.DOCKERHUB_PASSWORD}}
+
+      - name: Build Docker image
+        run: docker build -c madocx/getting-started
