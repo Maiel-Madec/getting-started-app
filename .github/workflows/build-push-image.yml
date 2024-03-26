@@ -7,3 +7,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v1
+
+      - name: Check all files
+        run: ls    
